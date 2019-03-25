@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  private MODULE = 'HomePage';
 
+  log(func, line = '') {
+      console.log(this.MODULE + '::' + func + '|' + line);
+  }
+
+  constructor() {
+    this.log('constructor');
+  }
 }
